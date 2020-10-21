@@ -31,13 +31,8 @@ def count_access(file_name,ip_dest):
             tcp_data = ip_data[TCP]
             if tcp_data.haslayer(TLS):
                 count += 1
-
-
     print ("Existe al menos {} paquetes de posible envio de credenciales".format(count) )
     
-
-
-
 def validate_path(file_name):
     if not os.path.isfile(file_name):
         return False
